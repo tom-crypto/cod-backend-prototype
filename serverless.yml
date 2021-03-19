@@ -1,0 +1,29 @@
+service: CoD-backend
+
+frameworkVersion: '2'
+
+provider:
+  name: aws
+  profile: default
+  runtime: nodejs12.x
+  timeout: 59
+  stage: dev
+  region: us-east-1 
+  stackName: CoD-backend-GoogleSheet-Solution
+  apiName: CoD-backend
+
+custom:
+  secret: ${ssm:/aws/reference/secretsmanager/dev/CoD-backend-COD_RAPID_API_KEY~true}
+  secret: ${ssm:/aws/reference/secretsmanager/dev/CoD-backend-COD_RAPID_API_HOST~true}
+
+
+environment:
+  COD_RAPID_API_KEY: ${self:provider.custom.secret.CoD-backend-COD_RAPID_API_KEY}
+  COD_RAPID_API_HOST: ${self:provider.custom.secret.CoD-backend-COD_RAPID_API_HOST}
+
+
+functions:
+  cronHandler:
+    handler: handler.run
+    events:
+      - schedule: cron(0/1 * ? * SAT-SUN *)
