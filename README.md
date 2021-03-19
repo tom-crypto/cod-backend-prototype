@@ -23,6 +23,8 @@ Lambda will run every 1min begining Saturday UTC and ending Sunday UTC.
 
 During the testing phase, the longest duration of the handler.run function was 40 seconds. The Lambda timeout has been set to 59 seconds for 2 reasons: 1) Allowing a 19 second buffer for possibly longer Lambda run times (when we have more fidelity about the Lambda duration we will adjust for effenciency). 2) The cron job is set execute every 60 second and this point the client has no need to run parallel lambda functions
 
+## Eventual Production Diagram
+![alt text](https://github.com/tom-crypto/cod-backend-prototype/blob/main/eventualProductionDiagram.png)
 
 ## Deprecated Notes
 The first match begins every Friday at 12AM EST, and the last match begins at 1145PM EST every Saturday. Converting to UTC, the first match begins every Saturday at 4AM UTC, and the last match begins every Sunday at 345AM UTC.
