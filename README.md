@@ -10,12 +10,12 @@ For a match to be scored, the match MUST begin on or after tournamentStart and b
 
 
 Calculate the following outputs:
--An individual team's Total Team Kill Death Ratio, totalTeamKDR:
--An individual team's Best Game Kills, bestGameKills
--An individual team's Best Game Placement Points, bestGamePP
--An individual team's Second Best Game Kills, secondBestGameKills
--An individual team's Second Best Game Placement Points, secondBestGamePP
--An individual team's Total Score, totalScore
+- An individual team's Total Team Kill Death Ratio, totalTeamKDR:
+- An individual team's Best Game Kills, bestGameKills
+- An individual team's Best Game Placement Points, bestGamePP
+- An individual team's Second Best Game Kills, secondBestGameKills
+- An individual team's Second Best Game Placement Points, secondBestGamePP
+- An individual team's Total Score, totalScore
 
 
 ## Timing
