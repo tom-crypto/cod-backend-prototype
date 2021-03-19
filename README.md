@@ -4,9 +4,9 @@ This repo is for a Call of Duty War Zone score card solution.
 ## Client's Logic requirements for handler.js
 
 Enforce tournament rules:
-For a match to be scored, all team-members MUST be present in each match
-For a match to be scored, all team-members MUST play the correct gameType
-For a match to be scored, the match MUST begin on or after tournamentStart and before tournamentStop
+- For a match to be scored, all team-members MUST be present in each match
+- For a match to be scored, all team-members MUST play the correct gameType
+- For a match to be scored, the match MUST begin on or after tournamentStart and before tournamentStop
 
 
 Calculate the following outputs:
